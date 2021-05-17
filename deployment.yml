@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karma
+  namespace: karma
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      app: karma
+  template:
+    metadata:
+      labels:
+        app: karma
+    spec:
+      containers:
+      - name: karma
+        image: lmierzwa/karma:v0.85
+        env:
+        - name: CONFIG_FILE
+          value: "/var/config/karmaconfig.yaml"
+        ports:
+          - containerPort: 8080
+        volumeMounts:
+        - mountPath: /var/config
+          name: karmaconfig
+      volumes:
+      - name: karmaconfig
+        configMap:
+          name: karmaconfig	

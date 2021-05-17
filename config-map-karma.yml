@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: karmaconfig
+  namespace: karma
+  labels:
+    app: karma
+data:
+  karmaconfig.yaml: |
+    alertmanager:
+      interval: 60s
+      servers:
+        - name: k8s
+          uri: http://prometheus-operator-161962-alertmanager.monitor:9093
+          timeout: 10s
