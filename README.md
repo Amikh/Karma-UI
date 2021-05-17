@@ -22,10 +22,10 @@ https://github.com/Amikh/Karma-UI.git
 5. kubectl apply -f config-map-karma.yml
 
 Then can to open application <ip-master-node:30085>
-
- <img src="img/amui.png" width="15%"></img> 
-
 ```
+<p align="center">
+ <img src="img/amui.png" width="15%"></img> 
+</p>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
