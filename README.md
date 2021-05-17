@@ -24,7 +24,7 @@ https://github.com/Amikh/Karma-UI.git
 Then can to open application <ip-master-node:30085>
 ```
 <p align="center">
- <img src="img/amui.png" width="15%"></img> 
+ <img src="img/amui.png" width="100%"></img> 
 </p>
 
 ## Contributing
